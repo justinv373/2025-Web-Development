@@ -35,7 +35,7 @@ html{
   #firstGallery:hover{
     box-shadow: 5px 5px 5px gray;
     filter: grayscale(0%);
-    height:325px;
+    height:200px;
   }
 
 
@@ -50,7 +50,7 @@ html{
   #secondGallery:hover{
     box-shadow: 5px 5px 5px gray;
     filter: grayscale(0%);
-    height:325px;
+    height:200px;
   }
 
 /* Challenge 14: Change the transition for all elements to 1 second */
