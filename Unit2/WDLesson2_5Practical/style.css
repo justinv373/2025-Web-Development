@@ -50,7 +50,7 @@ html{
   #secondGallery img:hover{
     box-shadow: 5px 5px 5px gray;
     filter: grayscale(0%);
-    height:450px;
+    height:375px;
   }
 
 /* Challenge 14: Change the transition for all elements to 1 second */
