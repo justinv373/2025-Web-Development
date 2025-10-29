@@ -27,12 +27,12 @@ html{
 /* Challenge 12: When the visitor moves their mouse over images inside of the element with an id of firstGallery,
                  apply some type of styling using the filter( ) effect
 */
-  #firstGallery{
+  #firstGallery img{
     box-shadow: 5px 5px 5px black;
     filter: grayscale(100%);
     margin:10px;
   }
-  #firstGallery:hover{
+  #firstGallery img:hover{
     box-shadow: 5px 5px 5px gray;
     filter: grayscale(0%);
     height:250px;
@@ -42,12 +42,12 @@ html{
 /* Challenge 13: When the visitor moves their mouse over images inside of the element with an id of secondGallery,
                  apply some other type of styling.
 */
-  #secondGallery{
+  #secondGallery img{
     box-shadow: 5px 5px 5px black;
     filter: grayscale(100%);
     margin:10px;
   }
-  #secondGallery:hover{
+  #secondGallery img:hover{
     box-shadow: 5px 5px 5px gray;
     filter: grayscale(0%);
     height:250px;
