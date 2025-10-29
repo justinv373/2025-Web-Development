@@ -20,7 +20,7 @@ html{
 /* Challenge 11: Change the radius of the border to 6px and height to 200px for all images inside of all 
                  elements with a class of gallery 
 */
-.gallery{
+.gallery img{
     border-radius: 6px;
     height: 200px;
 }
