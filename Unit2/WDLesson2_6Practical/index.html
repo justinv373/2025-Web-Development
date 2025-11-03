@@ -14,29 +14,46 @@
     <title>WD Lesson 2.6 Practical</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
-    <style>
-      /* Challenge 6: Using internal styling,  change the color of the web page.
 
+      /* Challenge 6: Using internal styling,  change the color of the web page.
       /* Further challenges are located in style.css  */
+
+      <style>
+      html{
+          background-color: cyan;
+        }
+      </style>
+        
+      
 
       /* Challenge 12: Create the other pages in the sitemap using index.html as the template. 
                        Modify the heading in the banner container appropriately to match the topic of the web page.
                        Modify the image included to match the topic of the web page.
-                       Provide an appropriate paragraph to the main container to match the topic of the web page.
-
-      */
+                       Provide an appropriate paragraph to the main container to match the topic of the web page.*/
       
-    </style>
   </head>
   <body>
     <!-- Challenge 1: Create the navigation bar in support of the sitemap associated with the website. -->
+     <div>
+      <a href="index.html">Home</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="js.html">JavaScript</a>
+     </div>
+
 
     <!-- Challenge 2: Create a banner container with heading of "Web Development".  Give it a class of "banner".-->
+     <div class="banner">
+      <h1>Web Development</h1>
+     </div>
+
 
     <div class="main">
       <!-- Challenge 3: Add the image of webicons.png-->
+       <img src="webicons.png" height="400" width="450">
       <!-- Challenge 4: Using inline styling, resize the above image appropriately -->
       <!-- Challenge 5: Write a paragraph describing web development.  Discuss the purpose of HTML, CSS and JavaScript -->
+       <p>Web development encompasses the creation and maintenance of websites. The front-end relies heavily on three core languages: HTML, CSS, and JavaScript. HTML (HyperText Markup Language) provides the fundamental structure and content of a webpage, defining elements like headings, paragraphs, images, and links. CSS (Cascading Style Sheets) controls the visual presentation and layout, dictating aspects such as colors, fonts, spacing, and responsive design for different devices. JavaScript adds dynamic interactivity and functionality, enabling features like animations, form validation, dynamic content updates, and client-side data manipulation, transforming static webpages into engaging user experiences</p>
 
     </div>
 
