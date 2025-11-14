@@ -30,8 +30,11 @@ nav a{
   transition:0.5s
 }
 
-.container a{
+.container #links a{
   text-decoration: none;
   display: flex;
+  color: black;
 }
+
+
 
