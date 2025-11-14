@@ -4,7 +4,7 @@
   display: flex;
 }
 
-a .container{
+nav a{
   text-decoration:none;
   background-color: green;
   color:white;
@@ -16,3 +16,22 @@ nav a{
   padding:10px;
   transition:0.5s
 }
+
+#footer{
+  text-decoration:none;
+  background-color: green;
+  color:white;
+}
+
+#footer{
+  flex: 1; 
+  text-align:center;
+  padding:3px;
+  transition:0.5s
+}
+
+.container a{
+  text-decoration: none;
+  display: flex;
+}
+
