@@ -7,6 +7,7 @@ function createStory(){
   let veg1 = document.getElementById("veg1");
   let veg2 = document.getElementById("veg2");
   let girlspan = document.getElementById("girlspan");
+}
 
   /* Task 3: Create variables and retrieve the information from the text inputs for the following, 
       1) A boy's name
@@ -17,7 +18,17 @@ function createStory(){
   Choose your variable names wisely.  This is a lot of practice of creating variables and using document.getElementById(..)
   */
 
+function createStory(){
+  let boy = document.getElementById("boy");
+  let veg1 = document.getElementById("Veg1");
+  let girl = document.getElementById("girl");
+  let veg2 = document.getElementById("Veg2");
+  
   /* Task 4: Set the innerHTML for each of the spans on lines 3 to 9 with the appropriate values from the variables you create in Task 3. */
+  
+  
+
+
 
   /* Task 5: Set the display property of the element with an id of "story" to 'block' */
 
