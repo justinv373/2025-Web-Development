@@ -30,12 +30,15 @@ let pi = 3.1415926;
 function cirArea(){
 let R = document.getElementById("R");
 let output = document.getElementById("output");      
-let CA = pi * (parseFloat(R.value)^2);
+let CA = pi * parseFloat(R.value) * parseFloat(R.value);
 output.innerHTML = CA
 }
 
 function cirPerimeter(){
-
+let R = document.getElementById("R");
+let output = document.getElementById("output");      
+let CI = pi * parseFloat(R.value) * 2;
+output.innerHTML = CI
 }
 
 /* Challenge Bonus: Complete the area and perimeter functions below for the triangle.  Guidelines,
