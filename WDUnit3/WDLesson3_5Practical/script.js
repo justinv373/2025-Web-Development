@@ -46,10 +46,24 @@ output.innerHTML = CI
       2) Perform the necessary calculations
       3) Display the results in the appropriate element
 */
-function triArea(){
-
+function triPerimeter(){
+let TA = document.getElementById("TA");
+let TB = document.getElementById("TB");
+let TC = document.getElementById("TC");
+let H = document.getElementById("H");
+let output = document.getElementById("output");      
+let TP = parseFloat(TA.value) + parseFloat(TB.value) + parseFloat(TC.value);
+output.innerHTML = TP
 }
 
-function triPerimeter(){
+let half = 0.5
 
+function triArea(){
+let TA = document.getElementById("TA");
+let TB = document.getElementById("TB");
+let TC = document.getElementById("TC");
+let H = document.getElementById("H");
+let output = document.getElementById("output");      
+let TAR = half * parseFloat(TB.value) * parseFloat(H.value);
+output.innerHTML = TAR
 }

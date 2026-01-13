@@ -15,6 +15,7 @@
       <a href="index.html"> Home </a>
       <a href="rectangle.html"> Rectangle </a>
       <a href="circle.html"> Circle </a>
+      <a href="triangle.html"> Triangle </a>
     </nav>
     <!-- Challenge Bonus: Add triangle.html as another link on the nav container.  
          Update index.html, rectangle.html and circle.html with the new navigation bar -->
@@ -26,6 +27,14 @@
       <!-- Challenge Bonus: Add the above card for the triangle to index.html -->
       <div class="card">
         <!-- Challenge Bonus: Create the necessary UI in order to calculate the area and perimeter of a triangle.  This will require separate buttons for area and perimeter each with their own handler. -->
+        
+        <input type="text" id="TA" placeholder="Length A">
+        <input type="text" id="TB" placeholder="Length B">
+        <input type="text" id="TC" placeholder="Length C">
+        <input type="text" id="H" placeholder="Height">
+        <input type="button" onclick="triArea()" value="Area">
+        <input type="button" onclick="triPerimeter()" value="Perimeter">
+        <div id="output"></div>
 
         <!-- Go to script.js to complete Challenge Bonus --> 
       </div>
