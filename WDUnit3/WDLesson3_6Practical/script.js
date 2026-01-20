@@ -6,7 +6,7 @@ function average(){
     let output = document.getElementById("output_average");
 
     let avg = (g1 + g2 + g3)/3;
-    output.innerHTML = "Average is " + avg;
+    output.innerHTML = "Average is " + avg.toFixed(1);
 }
 
 // Challenge 4:  Create the function for the Slope program.  Refer to the resource link in the HTML for assistance.
@@ -28,5 +28,5 @@ function bmi(){
     let output = document.getElementById("output_bmi");
 
     let bmi = (w / (h*h)) * 703;
-    output.innerHTML = "BMI is " + bmi;
+    output.innerHTML = "BMI is " + bmi.toFixed(1);
 }
