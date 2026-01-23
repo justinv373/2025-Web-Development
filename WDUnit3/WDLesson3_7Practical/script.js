@@ -20,15 +20,15 @@ function distance(){
       3) Display the results in the appropriate element
 */
 
-function compound(){
+function interest(){
     let P = parseFloat(document.getElementById("P").value);
     let r = parseFloat(document.getElementById("r").value);
     let n = parseFloat(document.getElementById("n").value);
     let t = parseFloat(document.getElementById("t").value);
-    let output = document.getElementById("output_compound");
+    let output = document.getElementById("output_interest");
 
-    let compound = P * Math.pow((1 + r/n),n*t);
-    output.innerHTML = "Compound is " + compound;
+    let interest = P * Math.pow((1 + r/n),n*t);
+    output.innerHTML = "Compound is " + interest;
 }
 
 
