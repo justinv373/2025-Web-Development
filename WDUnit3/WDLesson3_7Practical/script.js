@@ -28,7 +28,7 @@ function interest(){
     let output = document.getElementById("output_interest");
 
     let interest = P * Math.pow((1 + r/n),n*t);
-    output.innerHTML = "Compound is " + interest;
+    output.innerHTML = "Interest is " + interest;
 }
 
 
