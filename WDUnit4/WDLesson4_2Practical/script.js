@@ -11,6 +11,14 @@ function name(){
 
 }
 */
+function area(){
+  let w = parseFloat(document.getElementById("w").value);
+  let l = parseFloat(document.getElementById("l").value);
+  let output = document.getElementById("output_area");
+
+  let a = w * l
+  
+}
 
 /* Challenge 2:  Create the function for Challenge 1 scenario */
 
