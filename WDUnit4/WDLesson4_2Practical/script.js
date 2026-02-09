@@ -15,9 +15,14 @@ function area(){
   let w = parseFloat(document.getElementById("w").value);
   let l = parseFloat(document.getElementById("l").value);
   let output = document.getElementById("output_area");
-
+  let msg = "";
   let a = w * l
-  
+  if(l <= 0 || w <= 0){
+    msg = "Inappropriate measurments"
+  }else{
+    msg = a
+  }
+  output.innerHTML = "Area: " + msg
 }
 
 /* Challenge 2:  Create the function for Challenge 1 scenario */
@@ -29,5 +34,8 @@ function area(){
 2) You will need to write HTML as part of the output.  
    For example, output.innerHTML = `<input src="pic.png">` would place the image in the <div>*/
 function pet(){
-
+  let a = document.getElementById("animal");
+  let e = document.getElementById("emotion");
+  let output = document.getElementById("output_pet");
+  let msg = "";
 }
