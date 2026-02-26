@@ -6,7 +6,14 @@
 */
 let correct;
 function generateProblem(){
+       let output = document.getElementById("problem");
+       let a = Math.floor(Math.random()*21);
+       let b = Math.floor(Math.random()*21);
+       correct = a + b;
+       let build = `${a} + ${b} =`;
 
+       output.innerHTML = build;
+       
 }
 
 /* Challenge 3: Complete the function checkProblem by ,
@@ -20,12 +27,19 @@ function generateProblem(){
        4) Display msg in the output
 */
 function checkProblem(){
+       let response = parseInt(document.getElementById("response").value);
+       let output = document.getElementById("output");
 
+       let build1 = "";
+
+       if(response == correct){
+              build1 = "<img src=correct.webp>"
+       }else{
+              build1 = "<img src=incorrect.avif>"
+       }
+       output.innerHTML = build1;
 }
 
 /* Challenge Bonus: Could you randomize the operations so it is not only addition.  
 Hint: Generate a random number to decide whether the problem is an addition, substraction, multiplication or division problem.
 */
-
-
-
