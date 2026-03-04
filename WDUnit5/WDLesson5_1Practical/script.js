@@ -13,11 +13,21 @@ Year 3: $xxxxxx
 Year N: $xxxxxx
 */
 
-function final(){
+function interest(){
     let P = parseFloat(document.getElementById("P").value);
-    let r = parseFloat(document.getElementById("r").value);
+    let r = parseFloat(document.getElementById("r").value) / 100;
     let n = parseFloat(document.getElementById("n").value);
     let t = parseFloat(document.getElementById("t").value);
+
     let output = document.getElementById("output");
-    let A = Math.pow(P(1 + r/n), n*t)
+
+    let build = "";
+
+    for(let i = 1; i < t; i+=1){
+        let A = P * Math.pow(1 + r/n, n*i);
+
+        build += `Year ${i}: $${A.toFixed(2)}<br>`;
+    }
+
+    output.innerHTML = build;
 }
