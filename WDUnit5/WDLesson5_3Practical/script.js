@@ -16,11 +16,11 @@ function balance(){
   let t = parseInt(document.getElementById("t").value);
   let output = document.getElementById("output");
 
-  let build = `<table border="1"><tr><th>Year</th><th>Balance</th></tr>`;
+  let build = `<table><tr><th>Year</th><th>Balance</th></tr>`;
 
-  for (let i = 1; i <= t; i++){
-        let currentBalance = p * Math.pow((1 + r), i);
-        build += `<tr><td>i</td><td>$ + ${currentBalance.toFixed(2)}</td></tr>`;
+  for (let i = 1; i <= t; i+=1){
+        let a = p * Math.pow(1 + r, i);
+        build += `<tr><td>${i}</td><td>$${a.toFixed(2)}</td></tr>`;
 }
 build += `</table>`
 
