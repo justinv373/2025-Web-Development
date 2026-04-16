@@ -14,14 +14,13 @@ async function init(){
      into a hyperlink in order to actually display the pdf in a new tab
      https://mozilla.github.io/pdf.js/web/viewer.html?file=${...}
   */
- for(let i=0; i < title.length; i+=1){
-    let title = title[i]
+ for(let i=0; i < data.length; i+=1){
+    let criminal = data[i]
     build += `<div class="card">
-                <h2> title </h2>
-                <img src="image">
-                <p> sex </p>
-                <p> details </p>
-                <a href="url" target="_blank"> FBI </a>
+                <h2>${criminal.title} </h2>
+                <img class="fit" src=${criminal.image}>
+                <br>
+                <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${criminal.pdf}" target="_blank"> Poster </a>
               </div>
     `
  }
