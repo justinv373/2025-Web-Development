@@ -25,7 +25,6 @@ async function init(){
   output.innerHTML = build;
 }
 
-// Code below demonstrates the basic process to filter information.  Use as a guide for Challenge 2 and 4.
 function filterByBorough(){
   let output = document.getElementById("output");
   let borough = document.getElementById("borough").value;
@@ -35,12 +34,12 @@ function filterByBorough(){
 
   for(let i = 0; i < data.length; i+=1){
     let crash = data[i];
-    if(complaint.borough == borough){
+    if(crash.borough == borough){
     build += `<div class="fitted card">
                  <h3>${crash.crash_date}</h3>
                  <hr>
                  <p>${crash.borough}</p>
-                 <p>${crash.human_address}</p>
+                 <p>${crash.zip_code}</p>
                  <hr>
                  <p>${crash.vehicle_type_code1}</p>
                  <hr>
@@ -55,7 +54,6 @@ function filterByBorough(){
 }
 
 
-// Challenge 2: Create an event handler to filter the 311 Service Request by zip code
 function filterByZipCode(){
   let output = document.getElementById("output");
   let zipcode = document.getElementById("zip").value;
@@ -64,50 +62,49 @@ function filterByZipCode(){
   let ct = 0;
 
   for(let i = 0; i < data.length; i+=1){
-    let complaint = data[i];
-    if(complaint.incident_zip == zipcode){
-      build += `<div class="fitted card">
-                    <h3>${complaint.complaint_type}</h3>
-                    <hr>
-                    <p>${complaint.borough}</p>
-                    <p>${complaint.incident_zip}</p>
-                    <p>${complaint.descriptor}</p>
-                    <hr>
-                    <p>${complaint.created_date}</p>
-                    <hr>
-                    <p>${complaint.agency}</p>
-                </div>`;
-      ct += 1;
+    let crash = data[i];
+    if(crash.zip_code == zipcode){
+    build += `<div class="fitted card">
+                 <h3>${crash.crash_date}</h3>
+                 <hr>
+                 <p>${crash.borough}</p>
+                 <p>${crash.zip_code}</p>
+                 <hr>
+                 <p>${crash.vehicle_type_code1}</p>
+                 <hr>
+                 <p>${crash.vehicle_type_code2}</p>
+              </div>`
+        ct += 1;
+  
     }
   }
   result.innerHTML = `${ct} Results found.`
   output.innerHTML = build;
 }
 
-// Challenge 4: Create an event handler to filter the 311 Service Request by complaint type
 
-function filterByComplaint(){
+function filterByType(){
   let output = document.getElementById("output");
-  let complainttype = document.getElementById("complaint_type").value;
+  let type = document.getElementById("vehicle_type").value;
   let result = document.getElementById("result");
   let build = "";
   let ct = 0;
 
   for(let i = 0; i < data.length; i+=1){
-    let complaint = data[i];
-    if(complaint.complaint_type == complainttype){
-      build += `<div class="fitted card">
-                    <h3>${complaint.complaint_type}</h3>
-                    <hr>
-                    <p>${complaint.borough}</p>
-                    <p>${complaint.incident_zip}</p>
-                    <p>${complaint.descriptor}</p>
-                    <hr>
-                    <p>${complaint.created_date}</p>
-                    <hr>
-                    <p>${complaint.agency}</p>
-                </div>`;
-      ct += 1;
+    let crash = data[i];
+    if(crash.vehicle_type_code1 && crash.vehicle_type_code2 == type){
+    build += `<div class="fitted card">
+                 <h3>${crash.crash_date}</h3>
+                 <hr>
+                 <p>${crash.borough}</p>
+                 <p>${crash.zip_code}</p>
+                 <hr>
+                 <p>${crash.vehicle_type_code1}</p>
+                 <hr>
+                 <p>${crash.vehicle_type_code2}</p>
+              </div>`
+        ct += 1;
+  
     }
   }
   result.innerHTML = `${ct} Results found.`
