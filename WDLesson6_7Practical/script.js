@@ -1,7 +1,6 @@
 let data;
 async function init(){
   
-  //let link = "https://data.cityofnewyork.us/resource/h9gi-nx95.json"
   let link = "311.json"
   info = await fetch(link);
   data = await info.json();
