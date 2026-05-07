@@ -5,10 +5,12 @@ function init(){
   display(secret);
   
   //Challenge 1: Use the function area( ) created in helper.js to display the area of any rectangle of your choice.
-
+  let Area = area(10, 5); 
+  display("Rectangle Area: " + Area);
 
   //Challenge 2: Use the function celsius(  ) created in helper.js to celsius equivalent of any fahrenheit temperature. 
-
+  let tempC = celsius(98.6);
+  display("Celsius Equivalent: " + tempC.toFixed(2));
 
   //Challenge 4: Set height and weight to appropriate numbers. Pass the variables as arguments to the bmi() created in Challenge 3 and store in a variable called b. Display the value of b.
   let height;
