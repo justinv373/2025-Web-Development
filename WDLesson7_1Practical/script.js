@@ -30,9 +30,7 @@ function init(){
 
 
   //Challengen 10: Create an array, survey which contains several of "Y" and "N" response.  Pass the survey to the results( ) and display the value returned.
-  let survey = ["Y", "N", "Y", "Y", "N"];
-  let yCount = results(survey);
-  display("Total 'Y' Responses: " + yCount);
-  
-}
 
+
+
+}
