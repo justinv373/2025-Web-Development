@@ -8,25 +8,43 @@ async function init(){
   let output = document.getElementById("output");
   let build = "";
 
-  if(!mapObj){
-    mapObj = LargestContentfulPaint.map("map");
-  }
-  let map = mapOBj.setView(location,14);
+  function showMap(lat, lon){
 
-  for(let i = 0; i < data.length; i+=1){
+  let location = [lat, lon];
+
+  if(!mapObj){
+      mapObj = L.map("map");
+  } 
+  let map = mapObj.setView(location, 14);
+
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+  }).addTo(map);
+
+  let marker = L.marker(location).addTo(map);
+}
+
+
+function card( shoot ){ 
+
+  let location = [shoot.longitude, shoot.latitude];
+
+  let mapButton = "";
+  if(shoot.longitude && shoot.latitude){
+    mapButton = `<input type="button" onclick="showMap( ${location} )" value="Map">`
+  }
     let shoot = data[i];
     build += `<div class="fitted card">
-                 <h3>${crash.on_street_name}</h3>
+                 <h3>${shoot.boro}</h3>
                  <hr>
-                 <p>${crash.borough}</p>
-                 <p>${crash.zip_code}</p>
+                 <p>${shoot.occur_date}</p>
+                 <p>${shoot.occus_time}</p>
                  <hr>
-                 <p>${crash.contributing_factor_vehicle_1}</p>
-                 <p>${crash.contributing_factor_vehicle_2}</p>
+                 <p>${shoot.loc_of_occur_desc}</p>
+                 <p>${shoot.location_desc}</p>
                  <hr>
-                 <p>${crash.vehicle_type_code1}</p>
-                 <hr>
-                 <p>${crash.vehicle_type_code2}</p>
+                 ${mapButton}
               </div>`    
   }
   output.innerHTML = build;
